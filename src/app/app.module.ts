@@ -8,12 +8,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UnprotectedComponent } from './unprotected/unprotected.component';
 import { ProtectedComponent } from './protected/protected.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UnprotectedComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

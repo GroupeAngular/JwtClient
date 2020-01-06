@@ -1,9 +1,10 @@
 <div *ngIf="!isLoginRoute()">
-  <ul>
+  <app-sidebar></app-sidebar>
+  <!-- <ul>
     <li><a routerLink="protected">Protected resource</a></li>
     <li><a routerLink="unprotected">Unprotected resource</a></li>
     <li><a routerLink="login">Login</a></li>
-  </ul>
+  </ul> -->
 </div>
 
 <router-outlet></router-outlet>
