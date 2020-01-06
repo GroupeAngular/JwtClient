@@ -1,0 +1,17 @@
+.bg-login-image {
+  background: url("/assets/img/login.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-login-color {
+  background-color: #4e73df;
+}
+
+.login-error {
+  color: red;
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}

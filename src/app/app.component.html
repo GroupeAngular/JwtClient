@@ -1,7 +1,9 @@
-<ul>
-  <li><a routerLink="protected">Protected resource</a></li>
-  <li><a routerLink="unprotected">Unprotected resource</a></li>
-  <li><a routerLink="login">Login</a></li>
-</ul>
+<div *ngIf="!isLoginRoute()">
+  <ul>
+    <li><a routerLink="protected">Protected resource</a></li>
+    <li><a routerLink="unprotected">Unprotected resource</a></li>
+    <li><a routerLink="login">Login</a></li>
+  </ul>
+</div>
 
 <router-outlet></router-outlet>

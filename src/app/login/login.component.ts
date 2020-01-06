@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,12 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup;
 
+  errorMessage: string;
+
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -28,7 +32,10 @@ export class LoginComponent implements OnInit {
     const password = val.password;
     if (login && password) {
       this.authService.login(login, password)
-        .subscribe();
+        .subscribe(
+          _ => this.router.navigate(['/unprotected']),
+          error => this.errorMessage = 'Bad credentials'
+        );
     }
   }
 
