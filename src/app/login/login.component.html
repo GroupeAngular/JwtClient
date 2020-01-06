@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+
+  <label for="login">
+    Login :
+    <input type="text" formControlName="login">
+  </label>
+
+  <br/><br/>
+
+  <label for="password">
+    Password :
+    <input type="password" formControlName="password">
+  </label>
+
+  <br/><br/>
+
+  <button type="submit" [disabled]="!form.valid" (click)="login()">Submit</button>
+
+</form>
