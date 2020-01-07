@@ -4,11 +4,13 @@
   </div>
   <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
-      <!-- <app-topbar></app-topbar> -->
-    </div>
-    <div class="container-fluid">
-      <!-- Page Heading -->
-      <router-outlet></router-outlet>
+      <div *ngIf="!isLoginRoute()">
+        <!-- <app-topbar></app-topbar> -->
+      </div>
+      <div class="container-fluid">
+        <!-- Page Heading -->
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
 </div>
