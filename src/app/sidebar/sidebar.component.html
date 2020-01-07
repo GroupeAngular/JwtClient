@@ -12,7 +12,7 @@
   <!-- Nav Item - Dashboard -->
   <li class="nav-item active">
     <a class="nav-link" href="index.html">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <fa name="cog" animation="spin"></fa>
       <span>Dashboard</span></a>
     </li>
 
@@ -26,8 +26,14 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-      <a class="nav-link" routerLink="protected"><span>Protected</span></a>
-      <a class="nav-link" routerLink="unprotected"><span>Unprotected</span></a>
+      <a class="nav-link" routerLink="protected">
+        <fa name="lock"></fa>
+        <span>Protected</span>
+      </a>
+      <a class="nav-link" routerLink="unprotected">
+        <fa name="folder-open"></fa>
+        <span>Unprotected</span>
+      </a>
     </li>
   </ul>
   <!-- End of Sidebar -->

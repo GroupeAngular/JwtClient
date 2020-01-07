@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UnprotectedComponent } from './unprotected/unprotected.component';
 import { ProtectedComponent } from './protected/protected.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
