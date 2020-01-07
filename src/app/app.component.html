@@ -1,10 +1,14 @@
-<div *ngIf="!isLoginRoute()">
-  <app-sidebar></app-sidebar>
-  <!-- <ul>
-    <li><a routerLink="protected">Protected resource</a></li>
-    <li><a routerLink="unprotected">Unprotected resource</a></li>
-    <li><a routerLink="login">Login</a></li>
-  </ul> -->
+<div id="wrapper">
+  <div *ngIf="!isLoginRoute()">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <!-- <app-topbar></app-topbar> -->
+    </div>
+    <div class="container-fluid">
+      <!-- Page Heading -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-
-<router-outlet></router-outlet>
