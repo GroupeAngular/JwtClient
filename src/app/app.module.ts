@@ -10,13 +10,15 @@ import { UnprotectedComponent } from './unprotected/unprotected.component';
 import { ProtectedComponent } from './protected/protected.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { TopbarComponent } from './topbar/topbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UnprotectedComponent,
     ProtectedComponent,
-    SidebarComponent
+    SidebarComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
