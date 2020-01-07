@@ -10,6 +10,8 @@ export class AuthService {
 
   private loginUrl = 'http://localhost:8080/api/authenticate';
 
+  token: string;
+
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
@@ -17,6 +19,7 @@ export class AuthService {
       .pipe(map(
         user => {
           if (user && user.jwtToken) {
+            this.token = user.jwtToken;
             localStorage.setItem('token', user.jwtToken);
           }
         }
