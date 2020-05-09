@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     if (login && password) {
       this.authService.login(login, password)
         .subscribe(
-          _ => this.router.navigate(['/protected']),
+          _ => this.router.navigate(['']),
           error => this.errorMessage = 'Bad credentials'
         );
     }
